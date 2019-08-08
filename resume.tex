@@ -1,0 +1,217 @@
+%-------------------------
+% Resume in Latex
+% Author : Adapted by Roy Finkelberg from Sourabh Bajaj
+% License : MIT
+%------------------------
+
+% TODO consider lowering font size to 10
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\hypersetup{
+  urlcolor={blue}
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumePlainItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textsc{\small #4} \\ % TODO should this be it instead of sc?
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newenvironment{resumeItemList}{\resumeItemListStart}{\resumeItemListEnd}
+\newenvironment{resumeSubheadingList}{\resumeSubHeadingListStart}{\resumeSubHeadingListEnd}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{}{\huge Roy Finkelberg}} & Email: \href{mailto:roy@gatech.edu}{roy@gatech.edu}\\
+  \vspace{-2.0pt}
+  \href{}{} & Github: \href{https://github.com/rfinkelberg}{RFinkelberg} \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \begin{resumeSubheadingList}
+    \resumeSubheading
+      {Georgia Institute of Technology}{Atlanta, GA}
+      {Joint Bachelor and Master of Science in Computer Science}{}
+      \begin{resumeItemList}
+        \resumeItem{B.S in Computer Science (Aug. 2016 - Dec. 2019)}
+        {GPA: 3.82/4.0; Major GPA: 3.93/4.0 \\ Concentrations: Artificial Intelligence, Embedded Computing}
+        \resumeItem{M.S in Computer Science (Jan. 2020 - Dec. 2021)}
+        {Specialization: Machine Learning}
+      \end{resumeItemList}
+  \end{resumeSubheadingList}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \begin{resumeSubheadingList}
+    \resumeSubheading
+      {NVIDIA}{Austin, TX}
+      {Data Science - AI Infrastructure Intern (RAPIDS AI)}{May 2019 - Aug. 2019}
+      \begin{resumeItemList}
+      % TODO consider not having the bold parts
+        \resumeItem{Applied Research}{Adapted deep representation learning methods (graph autoencoders) to develop scalable
+        network analysis and link prediction methods for large cybersecurity networks}
+        \resumeItem{cuML}{Developed pure GPU implementations for ordinal feature encoding and data train/test split modules,
+        giving up to 290x speedups over CPU implementations on large ($\sim 10^7$ row) datasets}
+        \resumeItem{cuDF}{Constructed, profiled, and optimized fundamental data science primitives such as one-hot encoding and scalar-vector binary operations
+        in Cython and Numba, improving performance by 1.5x on wide datasets}
+      \end{resumeItemList}
+    % \resumeSubheading
+    %   {Google}{Mountain View, CA}
+    %   {Software Engineer}{Oct 2016 - Present}
+    %   \resumeItemListStart
+    %     \resumeItem{Tensorflow}
+    %       {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models.}
+    %     \resumeItem{Apache Beam}
+    %       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
+    %   \resumeItemListEnd
+
+
+    \resumeSubheading
+    {Pindrop Security}{Atlanta, GA}
+    {Software Engineering Intern - Research}{May 2018 - Aug. 2018}
+    \begin{resumeItemList}
+      \resumeItem{Test Engineering}{Developed an automated testing harness for a cloud based machine learning platform}
+      \resumeItem{Scalable System Design}{Designed an abstract schema to streamline creation and integration of new models}
+      \resumeItem{Health Monitoring}{Created a standardized interface for reporting and viewing model performance metrics through
+      Datadog, reducing manual Research Scientist intervention by $\sim 70$ hours per week}
+      \resumeItem{Model Optimization}{Scaled Scikit-Learn's DBSCAN algorithm to $\sim 10^6$ dimensional feature vectors using 
+      Spotify's open source Annoy library}
+    \end{resumeItemList}
+  \end{resumeSubheadingList}
+
+%-----------PROJECTS-----------------
+% Projects that didnt make the cut
+%< healthcare quality analytics and improvement recommendations
+%< stance
+%< mobile TPU hacking
+% TODO maybe instead of bullets just list projects with short blurbs. can fit more that way
+\section{Projects and Publications}
+  \begin{resumeSubheadingList}
+    \resumeSubheading
+    {Piazza Automated Related Question Recommender}{Published: \textit{ACM Learning @ Scale 2019}}
+    {Georgia Tech Contextual Computing Group}{Aug. 2018 - Present}
+    \begin{resumeItemList}
+      \resumePlainItem{Developed the Flask backend of a question recommendation engine which leverages the collective
+      memory of classes with online forums to prevent duplicate posts}
+      \resumePlainItem{Conducted A/B testing of model performance and impact across $1000+$ users}
+      \resumePlainItem{Published as \textit{PARQR: Augmenting the Piazza Online Forum to Better Support Degree Seeking Online Masters Students},
+      showing a 40\% reduction in duplicate posts} % TODO consider removing name here
+    \end{resumeItemList}
+    % As online classes grow in popularity, instructors turn to online forums to facilitate the discussion found 
+    % in regular classrooms. While effective, these scale poorly. Increasing class sizes lead to an increased
+    % number of duplicate posts and decreased situational awareness. PARQR is a recommendation engine which suggests
+    % users existing posts to prevent 
+
+    % TODO double dipping may be bad here
+    \resumeSubheading
+    {Towards Scalable Cybersecurity Network Analysis with Graph Autoencoders}{}
+    {NVIDIA - RAPIDS AI}{Aug. 2019}
+    \begin{resumeItemList}
+      \resumePlainItem{Investigated the use of autoencoder based methods for large scale cybersecurity network analysis}
+      \resumePlainItem{Adapted existing graph autoencoder architectures in Tensorflow and PyTorch to static and dynamic
+      cybersecurity networks}
+      \resumePlainItem{Published as an internal NVIDIA whitepaper, demonstrating up to 4x performance increases and 
+      9x speedups on link prediction tasks}
+    \end{resumeItemList}
+
+    \resumeSubheading
+    {Model Based Intention Detection for Intelligent Prostheses}{}
+    {Georgia Tech Exoskeleton Prosthetic and Intelligent Controls Lab}{Aug. 2017 - Dec. 2017}
+    \begin{resumeItemList}
+      \resumePlainItem{Collected and analyzed biometric sensor data to determine features important to gait
+      speed detection}
+      \resumePlainItem{Preprocessed data and engineered features using Python's Scikit-Learn library} % TODO dont like the way this sounds
+      \resumePlainItem{Presented a preliminary offline gait speed detection model demonstrating the effectiveness of these features}
+      \resumePlainItem{Assisted in the design of a Kivy GUI which interfaced with ROS to visualize and adjust a prosthetic's control
+      parameters during operation}
+    \end{resumeItemList}
+  \end{resumeSubheadingList}
+
+%<----------SKILLS-------------------
+\section{Skills}
+  \begin{resumeItemList}
+    \resumeItem{Languages}{Python (advanced), Java (intermediate), C (intermediate)}
+    \resumeItem{Tools/Technologies}{Numpy/Scipy, PyTorch, Pandas, Numba (with CUDA), Cython, Pytest, \LaTeX,
+                                    Software Integration, Hardware Prototyping, Linux Environments} % TODO experiemntal design/stat analysis?
+  \end{resumeItemList}
+
+%
+%--------PROGRAMMING SKILLS------------
+%\section{Programming Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+%      \hfill
+%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+%    }
+%  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
