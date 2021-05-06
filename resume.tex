@@ -51,11 +51,11 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1}{: #2 \vspace{-1.0pt}}
   }
 }
 \newcommand{\resumePlainItem}[1]{
-  \item\small{#1 \vspace{-2pt}}
+  \item\small{#1 \vspace{-1.0pt}}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -88,7 +88,7 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{}{\huge Roy Finkelberg}} & Email: \href{mailto:roy@gatech.edu}{roy@gatech.edu}\\
-  \vspace{-2.0pt}
+  \vspace{-3.0pt}
   \href{}{} & Github: \href{https://github.com/rfinkelberg}{RFinkelberg} \\
 \end{tabular*}
 
@@ -174,16 +174,21 @@
 
 \section{Selected Projects}
   \begin{resumeSubheadingList}
-    \resumeSubheading{Weakly Supervised Activity Recognition with Hierarchical Constraints}{}
-    {Georgia Tech Computational Behavior Analysis Group}{Aug. 2020 - Present}
+    % \resumeSubheading{Weakly Supervised Activity Recognition with Hierarchical Constraints}{}
+    \resumeSubheading{Dynamically Characterizing Hierarchical Information in Human Activity Recognition}{}
+    {Georgia Tech Computational Behavior Analysis Group}{\hspace{-1.0in} Aug. 2020 - May 2021}
     \begin{resumeItemList}
-      \resumePlainItem{\textbf{MS Thesis:} Developing a framework to dynamically learn and characterize
+      \resumePlainItem{\textbf{MS Thesis:} Developed a framework to dynamically learn and characterize
       hierarchical feature information in visual human activity datasets,
       with the goal of providing additional weak supervision to resource constrained
       action recognition pipelines}
       \resumePlainItem{Designed and evaluated the performance of extensions to current state of the art recurrent architectures
       on hierachically labeled time-series human activity data}
+      \resumePlainItem{Demonstrated that modern activity recognition models implicitly learn salient
+      aciton hierarchies without additional supervision, providing new avenues for developing
+      interpretable deep action recognition systems}
     \end{resumeItemList}
+    \pagebreak
     \resumeSubheading
     {Piazza Automated Related Question Recommender}{} %{Published: \textit{ACM Learning @ Scale 2019 and 2020}}
     {Georgia Tech Contextual Computing Group}{Aug. 2018 - Present}
@@ -195,11 +200,11 @@
       online forums to prevent duplicate posts. Results demonstrating 40\% reduction in
       duplicate posts were published in ACM Learning @ Scale 2019 (34\% acceptance rate)}
       \resumePlainItem{Conducted A/B tests of model performance and impact across $1000+$ users}
-      \resumePlainItem{Assisted in the design of a mixed-methods study measuring the impact of
+      \resumePlainItem{Designed mixed-methods studies measuring the impact of
       the tool on student/instructor behavior in forums. Results showing statistically significant
       improvement in user efficiency were published in ACM Learning @ Scale 2020}
-      \resumePlainItem{Led a cross-department collaboration developing tools for automatic classification
-      of cognitive presence from text data in course forums}
+      % \resumePlainItem{Led a cross-department collaboration developing tools for automatic classification
+      % of cognitive presence from text data in course forums}
       % \resumePlainItem{Published as \textit{PARQR: Augmenting the Piazza Online Forum to Better Support Degree Seeking Online Masters Students},
       % showing a 40\% reduction in duplicate posts} % TODO consider removing name here
     \end{resumeItemList}
